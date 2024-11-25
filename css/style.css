@@ -50,33 +50,32 @@ ul, li {
 	font-size: 24px;
 }
 
-    /* 更新情報を表示するコンテナ */
-    .update-container {
-      width: 80%;
-      max-height: 200px; /* 高さを指定してスクロール可能にする */
-      overflow-y: auto;  /* 縦方向にスクロールバーを表示 */
-      border: 1px solid #ccc; /* 枠線をつける */
-      border-radius: 8px; /* 丸みをつける */
-      padding: 10px;
-      background-color: #f9f9f9;
-    }
+.update-container {
+  width: 80%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
 
-    /* 各更新情報のアイテム */
-    .update-item {
-      margin-bottom: 15px; /* アイテム間にスペースを追加 */
-      padding: 10px;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
+.update-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
-    .update-item h3 {
-      margin: 0;
-      font-size: 1.2em;
-    }
+.update-item h3 {
+  margin: 0;
+  font-size: 1em; /* タイトル文字サイズ調整 */
+}
 
-    .update-item p {
-      margin: 5px 0 0;
-      color: #555;
-      font-size: 16px;
-    }
+.update-item p {
+  margin: 5px 0 0;
+  color: #555;
+  line-height: 1.5;
+  font-size: 14px; /* 本文文字サイズ調整 */
+}
