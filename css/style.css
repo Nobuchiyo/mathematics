@@ -53,7 +53,7 @@ ul, li {
     /* 更新情報を表示するコンテナ */
     .update-container {
       width: 80%;
-      max-height: 400px; /* 高さを指定してスクロール可能にする */
+      max-height: 200px; /* 高さを指定してスクロール可能にする */
       overflow-y: auto;  /* 縦方向にスクロールバーを表示 */
       border: 1px solid #ccc; /* 枠線をつける */
       border-radius: 8px; /* 丸みをつける */
@@ -78,4 +78,5 @@ ul, li {
     .update-item p {
       margin: 5px 0 0;
       color: #555;
+      font-size: 16px;
     }
