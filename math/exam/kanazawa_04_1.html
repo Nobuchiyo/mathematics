@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title>令和４年過去問[1]</title>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1 class="index-h">金沢大学の令和4年度の編入試験の過去問大問[1]</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="math.html">数学</a></li>
+                    <li><a href="../coding/programming.html">プログラミング</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="../guide/guidance.html">このサイトのご利用方法</a></li>
+                    <li><a>お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="flex-container">
+            <a href="elementary.html"><h2>小学校算数</h2></a>
+            <a href="junior-high.html"><h2>中学数学</h2></a>
+            <a href="high-school.html"><h2>高校数学</h2></a>
+            <a href="university.html"><h2>大学数学</h2></a>
+            <a href="formulas.html"><h2>数学公式集</h2></a>
+            <a href="./exam.html"><h2>過去問・解答付き</h2></a>
+        </div>
+        </header>
+        
+        
+        
+        
+        
+
+<body>
+<main>
+	<div class="relative">
+	<h2>固有値と固有ベクトルの求め方</h2>
+	<div class="center">
+        <p>次の行列 \( A \) を考えます：</p>
+    <p>
+        行列 \( A \) は次のように与えられます：
+    </p>
+    <p>
+        \[ A = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 2 & -3 \\ 1 & 1 & -2 \end{pmatrix} \]
+    </p>
+
+    <h2>特性方程式の導出</h2>
+    <p>
+        固有値 \( \lambda \) は次の特性方程式を満たします：
+    </p>
+    <p>
+        \[ \text{det}(A - \lambda I) = 0 \]
+    </p>
+    <p>
+        ここで、単位行列 \( I \) は次のようになります：
+    </p>
+    <p>
+        \[ I = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \]
+    </p>
+    <p>
+        したがって、\[ A - \lambda I \] は次のようになります：
+    </p>
+    <p>
+        \[ A - \lambda I = \begin{pmatrix} 1-\lambda & 0 & 0 \\ 1 & 2-\lambda & -3 \\ 1 & 1 & -2-\lambda \end{pmatrix} \]
+    </p>
+
+    <h2>行列式の計算</h2>
+    <p>
+        行列 \[ A - \lambda I \] の行列式を計算します：
+    </p>
+    <p>
+        \[ \text{det}(A - \lambda I) = \text{det} \begin{pmatrix} 1-\lambda & 0 & 0 \\ 1 & 2-\lambda & -3 \\ 1 & 1 & -2-\lambda \end{pmatrix} \]
+    </p>
+    <p>
+        行列式は次のように展開できます：
+    </p>
+    <p>
+        \[ \text{det}(A - \lambda I) = (1-\lambda) \cdot \text{det} \begin{pmatrix} 2-\lambda & -3 \\ 1 & -2-\lambda \end{pmatrix} \]
+    </p>
+    <p>
+        ここで、2×2行列の行列式を計算します：
+    </p>
+    <p>
+        \[ \text{det} \begin{pmatrix} 2-\lambda & -3 \\ 1 & -2-\lambda \end{pmatrix} = (2-\lambda)(-2-\lambda) - (-3)(1) \]
+    </p>
+    <p>
+        \[ = (2-\lambda)(-2-\lambda) + 3 \]
+    </p>
+    <p>
+        \[ = -4 - 2\lambda + 2\lambda + \lambda^2 + 3 \]
+    </p>
+    <p>
+        \[ = \lambda^2 - 1 \]
+    </p>
+
+    <h2>特性方程式の解法</h2>
+    <p>
+        したがって、特性方程式は次のようになります：
+    </p>
+    <p>
+        \[ \text{det}(A - \lambda I) = (1-\lambda)(\lambda^2 - 1) = 0 \]
+    </p>
+    <p>
+        これを展開すると、次の2つの因子に分解できます：
+    </p>
+    <p>
+        \[ 1 - \lambda = 0 \quad \text{または} \quad \lambda^2 - 1 = 0 \]
+    </p>
+    <p>
+        それぞれ解くと：
+    </p>
+    <p>
+        \[ \lambda = 1 \quad \text{または} \quad \lambda^2 = 1 \quad \Rightarrow \quad \lambda = \pm 1 \]
+    </p>
+
+    <h2>固有値の結果</h2>
+    <p>
+        したがって、行列 \( A \) の固有値は次の通りです：
+    </p>
+    <p>
+        \( \lambda = 1, 1, -1 \)
+    </p>
+    
+    <h2>固有ベクトルを求める</h2>
+    <h3>固有値 \( \lambda = 1 \) の場合</h3>
+    <p>行列 \( A - I \) を考えます：</p>
+    <p>
+        \[
+        A - I = 
+        \begin{bmatrix} 
+        0 & 0 & 0 \\ 
+        1 & 1 & -3 \\ 
+        1 & 1 & -3 
+        \end{bmatrix}.
+        \]
+    </p>
+    <p>この行列のランクは 1 なので、自由変数が2つ存在します。方程式：</p>
+    <p>
+        \[
+        x + y - 3z = 0
+        \]
+    </p>
+    <p>を満たすような \( x, y, z \) を求めます。これを解くと：</p>
+    <p>
+        \[
+        x = -y + 3z.
+        \]
+    </p>
+    <p>自由変数 \( y, z \) に具体的な値を代入して基底を求めます：</p>
+    <ul>
+        <li>\( z = 0, y = 1 \) とすると、\( x = -1 \) より：
+        \[
+        \mathbf{v}_1 = \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix}.
+        \]
+        </li>
+        <li>\( z = 1, y = 0 \) とすると、\( x = 3 \) より：
+        \[
+        \mathbf{v}_2 = \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix}.
+        \]
+        </li>
+    </ul>
+    <p>よって、固有空間 \( W(1; A) \) の基底は：</p>
+    <p>
+        \[
+        W(1; A) = \mathrm{span}\left\{
+        \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix}, 
+        \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix}
+        \right\}.
+        \]
+    </p>
+
+    <h3>固有値 \( \lambda = -1 \) の場合</h3>
+    <p>λが-1なので単位行列Iを-1倍した行列を引いて \( A + I \) を考えます：</p>
+    <p>
+        \[
+        A + I = 
+        \begin{bmatrix} 
+        2 & 0 & 0 \\ 
+        1 & 3 & -3 \\ 
+        1 & 1 & -1 
+        \end{bmatrix}.
+        \]
+    </p>
+    <p>この行列を簡約化して、次の方程式を得ます：</p>
+    <p>
+        \[
+        x + y - z = 0.
+        \]
+    </p>
+    <p>自由変数を \( z \) として、\( x, y \) を表すと：</p>
+    <p>
+        \[
+        x = z, \quad y = 0.
+        \]
+    </p>
+    <p>よって、固有ベクトルは：</p>
+    <p>
+        \[
+        \mathbf{v}_3 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}.
+        \]
+    </p>
+    <p>固有空間 \( W(-1; A) \) は：</p>
+    <p>
+        \[
+        W(-1; A) = \mathrm{span}\left\{
+        \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}
+        \right\}.
+        \]
+    </p>
+
+    <h2>結果のまとめ</h2>
+    <p>固有値と対応する固有空間は次の通りです：</p>
+    <ul>
+        <li>\( \lambda = 1 \):
+        \[
+        W(1; A) = \mathrm{span}\left\{
+        \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix}, 
+        \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix}
+        \right\}.
+        \]
+        </li>
+        <li>\( \lambda = -1 \):
+        \[
+        W(-1; A) = \mathrm{span}\left\{
+        \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}
+        \right\}.
+        \]
+        </li>
+    </ul>
+	
+	    <h1>固有空間の表記</h1>
+
+    <h2>固有値 λ = 1 の場合</h2>
+    <p>
+        固有値 \( \lambda = 1 \) に対応する固有空間は次のように表されます：
+    </p>
+    <p>
+        \[
+        W(1; A) = \left\{ s \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix} + t \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix} \mid s, t \in \mathbb{R} \right\}
+        \]
+    </p>
+    <p>
+        ここで、\( s \) と \( t \) は任意の実数であり、これらを変化させることで固有空間内の任意のベクトルを得ることができます。
+    </p>
+
+    <h2>固有値 λ = -1 の場合</h2>
+    <p>
+        固有値 \( \lambda = -1 \) に対応する固有空間は次のように表されます：
+    </p>
+    <p>
+        \[
+        W(-1; A) = \left\{ t \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \mid t \in \mathbb{R} \right\}
+        \]
+    </p>
+    <p>
+        ここで、固有ベクトル \( \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \) が単独で基底を形成し、係数 \( t \) は任意の実数です。
+    </p>
+
+
+	<h1>行列の対角化判定と方法</h1>
+
+    <h2>行列 \( A \) の対角化可能性の判定</h2>
+    <p>行列 \( A \) が対角化可能であるためには、次の条件を満たす必要があります：</p>
+    <ol>
+        <li>各固有値の<strong>幾何的重複度</strong>（固有空間の次元）が、その<strong>代数的重複度</strong>（固有方程式での重複度）と一致する。</li>
+        <li>すべての固有ベクトルが線形独立である。</li>
+    </ol>
+
+    <h3>固有値と対応する情報</h3>
+    <p>行列 \( A \) の固有値と対応する情報は以下の通りです：</p>
+    <ul>
+        <li>固有値 \( \lambda = 1 \):
+            <ul>
+                <li>代数的重複度: \( 2 \)</li>
+                <li>幾何的重複度: \( 2 \)（基底は \( \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix} \) と \( \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix} \)）</li>
+            </ul>
+        </li>
+        <li>固有値 \( \lambda = -1 \):
+            <ul>
+                <li>代数的重複度: \( 1 \)</li>
+                <li>幾何的重複度: \( 1 \)（基底は \( \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \)）</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>すべての固有値について、幾何的重複度と代数的重複度が一致しており、固有ベクトルは線形独立です。</p>
+    <p><strong>結論：</strong>行列 \( A \) は対角化可能です。</p>
+
+    <h2>対角化の方法</h2>
+    <p>行列 \( A \) を対角化するには、次の手順を実行します：</p>
+
+    <h3>1. 固有ベクトルを列ベクトルとして並べた行列 \( P \) を作成</h3>
+    <p>行列 \( P \) は次のようになります：</p>
+    <p>
+        \[
+        P = \begin{bmatrix}
+        -1 & 3 & 0 \\
+        1 & 0 & 1 \\
+        0 & 1 & 1
+        \end{bmatrix}
+        \]
+    </p>
+
+    <h3>2. 対角行列 \( D \) を作成</h3>
+    <p>対角行列 \( D \) は、固有値を対角成分として配置した次の行列です：</p>
+    <p>
+        \[
+        D = \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & -1
+        \end{bmatrix}
+        \]
+    </p>
+
+    <h3>3. 対角化の式を確認</h3>
+    <p>行列 \( A \) は次のように対角化されます：</p>
+    <p>
+        \[
+        A = P D P^{-1}
+        \]
+    </p>
+
+    <h2>まとめ</h2>
+    <p>行列 \( A \) の固有値と固有空間の次元を確認した結果、対角化可能であることが分かりました。対角化行列 \( P \) と対角行列 \( D \) を用いて、行列 \( A \) を対角化できます。</p>
+
+</div>
+</div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+    

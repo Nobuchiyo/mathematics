@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* index.html */
+body {
+	background-color: #F3FFD8;
+}
+
+.index-h {
+	text-align: center;
+}
+
+
+/* すべてのページに表示するナビゲーションのスタイル */
+.main-nav ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 25px;
+}
+
+.main-nav a {
+	text-decoration: none;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+}
+
+
+/* リンクの下線を消し、ホバーした時だけ表示してポインターも変える */
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+/* 文字や数式の大きさを大きめに設定 */
+p {
+	font-size: 24px;
+}
+
+ul, li {
+	font-size: 24px;
+}
