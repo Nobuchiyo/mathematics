@@ -9,6 +9,10 @@ body {
 	text-align: center;
 }
 
+main {
+	width: 1000px;
+	margin: 20px auto;
+}
 
 /* すべてのページに表示するナビゲーションのスタイル */
 .main-nav ul {
