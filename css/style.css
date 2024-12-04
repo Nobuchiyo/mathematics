@@ -33,16 +33,16 @@ main {
 
 /* .contentは左側のメインコンテンツ、.detailsは右側に表示する補足など */
 .content {
-	max-width: 900px;
-	height: 1500px;
-	margin: 10px auto;
+    max-width: 900px;
+    height: 100%;
+    margin: 10px auto;
     flex: 4;
     overflow-y: auto; /* スクロールを有効にする */
     position: relative;
 }
 
 .details {
-	max-width: 350px;
+    max-width: 350px;
     height: 100%;
     flex: 1;
     overflow-y: auto;
