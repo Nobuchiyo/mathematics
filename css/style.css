@@ -5,14 +5,53 @@ body {
 	background-color: #F3FFD8;
 }
 
+header {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
 .index-h {
 	text-align: center;
 }
 
 main {
-	width: 1000px;
-	margin: 20px auto;
+	width: 90%;
+	margin: 10px auto;
 }
+
+/* .two-columnは各記事のmainのクラス属性 */
+.two-column {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px auto;
+    height: 100vh;
+}
+
+/* .contentは左側のメインコンテンツ、.detailsは右側に表示する補足など */
+.content {
+	max-width: 900px;
+	height: 1500px;
+	margin: 10px auto;
+    flex: 4;
+    overflow-y: auto; /* スクロールを有効にする */
+    position: relative;
+}
+
+.details {
+	max-width: 350px;
+    height: 100%;
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    margin-left: auto;
+}
+
 
 /* すべてのページに表示するナビゲーションのスタイル */
 .main-nav ul {
