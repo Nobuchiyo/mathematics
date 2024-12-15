@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title>ラグランジュの定理とシローの定理</title>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1 class="index-h">群論と対称性</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="math.html">数学</a></li>
+                    <li><a href="../coding/programming.html">プログラミング</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="../guide/guidance.html">このサイトのご利用方法</a></li>
+                    <li><a>お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="flex-container">
+            <a href="elementary.html"><h2>小学校算数</h2></a>
+            <a href="junior-high.html"><h2>中学数学</h2></a>
+            <a href="high-school.html"><h2>高校数学</h2></a>
+            <a href="university.html"><h2>大学数学</h2></a>
+            <a href="formulas.html"><h2>数学公式集</h2></a>
+            <a href="../exam.html"><h2>過去問・解答付き</h2></a>
+        </div>
+        </header>
+        
+	<main class="two-column">
+	<!-- Left column -->
+        <div class="content">
+	
+	<h2>1. ラグランジュの定理</h2>
+    <p>ラグランジュの定理は、群の位数と部分群の位数の関係を示します。</p>
+    <p><strong>定理:</strong> 群 <em>G</em> の部分群 <em>H</em> の位数は、<em>G</em> の位数を割り切ります。</p>
+    <p>式で表すと、
+        \[ |G| = |H| \cdot [G : H], \]
+        ここで \([G : H]\) は剰余類の個数です。
+    </p>
+    <div class="example">
+        <p><strong>例:</strong> 立方体の回転群を考えます。立方体の全回転群は24個の要素を持ちます。この群の部分群として、特定の面を固定する回転群（4つの要素を持つ）を取ると、その剰余類の個数は \( 24 / 4 = 6 \) になります。</p>
+    </div>
 
+    <h2>2. シローの定理</h2>
+    <p>シローの定理は、特定の素数冪の位数を持つ部分群の存在を保証します。</p>
+    <p><strong>定理:</strong> 有限群の位数が \( p^k \cdot m \) （\( p \) は素数、\( p \) は \( m \) を割らない）であるとき、位数が \( p^k \) の部分群（シロー \( p \)-部分群）が存在します。</p>
+    <div class="example">
+        <p><strong>例:</strong> 対称群 \( S_4 \) を考えます。この群の位数は \( 24 = 2^3 \cdot 3 \) です。シローの定理により、\( 2^3 = 8 \) を位数とする部分群が存在し、さらにそのような部分群はすべて \( S_4 \) 内で共役です。</p>
+    </div>
+
+    <h2>3. 準同型定理</h2>
+    <p>準同型定理は、群の射影による構造の簡略化を示します。</p>
+    <p><strong>定理:</strong> 群準同型 \( \phi: G \to H \) に対し、商群 \( G / \ker(\phi) \) は像 \( \mathrm{Im}(\phi) \) と同型です。</p>
+    <div class="example">
+        <p><strong>例:</strong> 群 \( G \) を整数全体の加法群 \( \mathbb{Z} \) とし、準同型 \( \phi: \mathbb{Z} \to \mathbb{Z}_6 \) を \( \phi(n) = n \mod 6 \) で定義します。この場合、核 \( \ker(\phi) \) は \( 6 \mathbb{Z} \) であり、商群 \( \mathbb{Z} / 6\mathbb{Z} \) は \( \mathbb{Z}_6 \) と同型です。</p>
+    </div>
+
+    <h2>まとめ</h2>
+    <ul>
+        <li>ラグランジュの定理は、群の対称性の「全体」と「部分」の関係を示します。</li>
+        <li>シローの定理は、特定の素数冪の位数を持つ部分群を通じて局所的な対称性を捉えます。</li>
+        <li>準同型定理は、群構造を簡略化して本質的な対称性を明らかにします。</li>
+    </ul>
+
+
+	 </div>
+<!-- Right column -->
+        <div class="details">
+        <h2>[解説・用語]</h2>
+	</div>
+        
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+
+
+    
+
+    
