@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title>数体の単拡大</title>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1 class="index-h">数体の単拡大とオブジェクト指向の類似性</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="math.html">数学</a></li>
+                    <li><a href="../coding/programming.html">プログラミング</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="../guide/guidance.html">このサイトのご利用方法</a></li>
+                    <li><a>お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="flex-container">
+            <a href="elementary.html"><h2>小学校算数</h2></a>
+            <a href="junior-high.html"><h2>中学数学</h2></a>
+            <a href="high-school.html"><h2>高校数学</h2></a>
+            <a href="university.html"><h2>大学数学</h2></a>
+            <a href="formulas.html"><h2>数学公式集</h2></a>
+            <a href="../exam.html"><h2>過去問・解答付き</h2></a>
+        </div>
+        </header>
+        
+	<main class="two-column">
+	<!-- Left column -->
+        <div class="content">
+	
+	<h2>1. 数体の単拡大とオブジェクト指向の継承の類似点</h2>
 
+    <ol>
+        <li>
+            <strong>包含関係と継承</strong><br>
+            数体の拡大では、もとの数体（親数体）が拡大された数体（子数体）に完全に含まれます。例えば、
+            \( \mathbb{Q} \subset \mathbb{Q}(\sqrt{2}) \) では、\( \mathbb{Q} \) の要素すべてが \( \mathbb{Q}(\sqrt{2}) \) に含まれます。
+            オブジェクト指向プログラミングでは、親クラスのフィールドやメソッドは子クラスに継承され、子クラスがそれを拡張して新しいフィールドやメソッドを追加できます。
+        </li>
+
+        <li>
+            <strong>新しい要素の追加</strong><br>
+            数体拡大では、新しい代数的要素（例えば、\( \sqrt{2} \) や \( \sqrt{3} \)）を追加していきます。これにより、元の数体に新たな次元が加わります。
+            子クラスも同様に、親クラスにはない独自のプロパティや振る舞いを追加します。
+        </li>
+
+        <li>
+            <strong>階層構造</strong><br>
+            数体の拡大は階層的であり、例えば \( \mathbb{Q}(\sqrt{2}, \sqrt{3}) \) は \( \mathbb{Q}(\sqrt{2}) \) を含み、さらにその元になっている \( \mathbb{Q} \) を含みます。
+            オブジェクト指向のクラス継承も、親クラス→子クラス→孫クラスというような階層構造を持ちます。
+        </li>
+    </ol>
+
+    <h2>2. 直観的なイメージ</h2>
+
+    <p>数体の拡大をクラスの設計と対応づけると次のようなイメージが得られます：</p>
+
+    <ul>
+        <li><strong>親数体:</strong> \( \mathbb{Q} \)（既存のクラス）</li>
+        <li><strong>新しい数体要素:</strong> \( \sqrt{2} \)（新しいフィールドやメソッド）</li>
+        <li><strong>拡大された数体:</strong> \( \mathbb{Q}(\sqrt{2}) \)（新しいクラス）</li>
+    </ul>
+
+    <pre>
+class Rational {
+    // Rational 数（\mathbb{Q}）の振る舞いを定義
+}
+
+class QuadraticExtension extends Rational {
+    // 新しい要素 sqrt2 を追加
+    double sqrt2;
+}
+    </pre>
+
+    <h2>3. この類似性の意義</h2>
+
+    <p>
+        このような類似性を理解することは、数学の抽象的な概念をより直観的に把握する助けになります。
+        さらに、数体拡大の「積み重ね」や「階層構造」をオブジェクト指向の概念として表現することで、
+        数学とプログラミングの間に新たな接点を見つけることができるでしょう。
+    </p>
+
+	 </div>
+<!-- Right column -->
+        <div class="details">
+        <h2>[解説・用語]</h2>
+	</div>
+        
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+
+    
+
+    
