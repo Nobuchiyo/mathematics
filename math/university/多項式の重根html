@@ -4,14 +4,14 @@
         <meta charset="utf-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/style.css">
-        <title></title>
+        <title>>重根の性質</title>
         <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     </head>
     <body>
         <header>
-            <h1 class="index-h"></h1>
+            <h1 class="index-h">多項式の重根</h1>
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.html">HOME</a></li>
@@ -35,7 +35,48 @@
 	<main class="two-column">
 	<!-- Left column -->
         <div class="content">
-	
+	<p>
+        多項式 <em>f(x)</em> の根 \( \alpha \) が「重根」であるとは、\( \alpha \) が \( f(x) \) を複数回割り切ることを意味します。すなわち、次の形で表されます。
+    </p>
+    <p>
+        \[
+        f(x) = (x - \alpha)^m g(x)
+        \]
+    </p>
+    <p>ここで:</p>
+    <ul>
+        <li>\( m \geq 2 \) は \( \alpha \) の重複度（重根の次数）です。</li>
+        <li>\( g(x) \) は多項式で、\( g(\alpha) \neq 0 \) です。</li>
+    </ul>
+
+    <h2>微分の確認</h2>
+    <p>
+        \( f(x) = (x - \alpha)^m g(x) \) を微分すると、積の微分公式を用いて次のように表されます。
+    </p>
+    <p>
+        \[
+        f'(x) = m (x - \alpha)^{m-1} g(x) + (x - \alpha)^m g'(x)
+        \]
+    </p>
+    <p>ここで \( x = \alpha \) を代入すると:</p>
+    <p>
+        \[
+        f'(\alpha) = m \cdot 0^{m-1} \cdot g(\alpha) + 0^m \cdot g'(\alpha) = 0
+        \]
+    </p>
+    <p>
+        したがって、\( f'(x) \) の式でも \( \alpha \) を根として持つため、\( f'(\alpha) = 0 \) となります。
+    </p>
+
+    <h2>重要な結論</h2>
+    <ul>
+        <li>\( \alpha \) が \( f(x) = 0 \) の単根（重複度が 1）なら、\( f'(\alpha) \neq 0 \)。</li>
+        <li>\( \alpha \) が重根（重複度が 2 以上）なら、\( f'(\alpha) = 0 \)。</li>
+    </ul>
+    <p>
+        この性質は、重根を検出するための有効な手段として使われます。例えば、数値計算や代数的な問題を解く際に利用されます。
+    </p>
+
 	
 	 </div>
 <!-- Right column -->
@@ -52,3 +93,6 @@
     </body>
 </html>
 
+
+    
+    
