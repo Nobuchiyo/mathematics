@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title>核と像、完全列</title>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1 class="index-h">金沢大学の令和4年度の編入試験の過去問大問[1]</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="math.html">数学</a></li>
+                    <li><a href="../coding/programming.html">プログラミング</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="../guide/guidance.html">このサイトのご利用方法</a></li>
+                    <li><a>お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="flex-container">
+            <a href="elementary.html"><h2>小学校算数</h2></a>
+            <a href="junior-high.html"><h2>中学数学</h2></a>
+            <a href="high-school.html"><h2>高校数学</h2></a>
+            <a href="university.html"><h2>大学数学</h2></a>
+            <a href="formulas.html"><h2>数学公式集</h2></a>
+            <a href="./exam.html"><h2>過去問・解答付き</h2></a>
+        </div>
+        </header>
+        
+	<main class="two-column">
+	<!-- Left column -->
+        <div class="content">
+	
+	<h1>線形代数：核と像、および完全列</h1>
 
+    <h2>1. 核 \(\ker(f)\) と像 \(\mathrm{im}(f)\) の役割</h2>
+
+    <h3>核 \(\ker(f)\)</h3>
+    <p>
+        線形写像 \(f: V \to W\) の核 \(\ker(f)\) は、\(W\) においてゼロに写される \(V\) のベクトルの集合です。正式には、
+        \[
+        \ker(f) = \{v \in V \mid f(v) = 0\}.
+        \]
+        つまり、\(\ker(f)\) は \(f\) によって「消える」ベクトルからなる部分空間です。
+    </p>
+    <p><b>対称性の観点:</b> \(\ker(f)\) は、写像 \(f\) が無視または破壊する対称性（または情報）を表します。</p>
+
+    <h3>像 \(\mathrm{im}(f)\)</h3>
+    <p>
+        像 \(\mathrm{im}(f)\) は、\(f\) の全ての出力の集合を表します：
+        \[
+        \mathrm{im}(f) = \{f(v) \mid v \in V\}.
+        \]
+        これは、写像 \(f\) によって生成される \(W\) の部分空間です。
+    </p>
+    <p><b>対称性の観点:</b> \(\mathrm{im}(f)\) は、写像 \(f\) によって保存および伝播される対称性を表します。</p>
+
+    <h2>2. 完全列</h2>
+    <p>
+        <b>完全列</b> は、次のようなベクトル空間と線形写像の列です：
+        \[
+        0 \longrightarrow A \xrightarrow{f} B \xrightarrow{g} C \longrightarrow 0
+        \]
+        ここで、各写像の像が次の写像の核に等しいことを意味します。具体的には：
+        \[
+        \mathrm{im}(f) = \ker(g).
+        \]
+    </p>
+    <p><b>対称性の観点:</b> 完全列は、対称性が空間をどのように移動するかを追跡します。どこで対称性が保存され、変換され、または「失われる」（ゼロに写される）かを示します。
+    </p>
+
+    <h2>3. 対称性に関する直感的な理解</h2>
+    <ul>
+        <li><b>核 \(\ker(f)\):</b> 写像 \(f\) によって「消える」対称性の部分空間。</li>
+        <li><b>像 \(\mathrm{im}(f)\):</b> 写像 \(f\) によって「保存される」またはターゲット空間に表現される対称性。</li>
+        <li><b>完全列:</b> 対称性が空間をどのように移動し、どこで情報が失われたり変換されたりするかを記述します。</li>
+    </ul>
+
+    <h2>4. 具体例</h2>
+    <p>線形写像 \(f: \mathbb{R}^3 \to \mathbb{R}^2\) を次のように定義します：</p>
+    \[
+    f(x, y, z) = (x + y, y + z).
+    \]
+    <p>
+        核 \(\ker(f)\) は次の条件を満たすベクトル \((x, y, z)\) の集合です：
+        \[
+        x + y = 0 \quad \text{および} \quad y + z = 0.
+        \]
+        これを解くと、\(\ker(f) = \{(t, -t, -t) \mid t \in \mathbb{R}\}\) という1次元部分空間になります。
+    </p>
+    <p>
+        像 \(\mathrm{im}(f)\) は、\((1, 1)\) と \((0, 1)\) によって張られる \(\mathbb{R}^2\) の部分空間です。この場合、\(\mathbb{R}^2\) 全体が像となります。
+    </p>
+
+    <h2>5. 結論</h2>
+    <p>
+        線形写像の核と像、そして完全列の概念は、空間間で対称性や構造がどのように変換されるかを理解するための強力なツールです。核は「失われる」部分を示し、像は「保存される」部分を示し、完全列はこれらの概念を結びつけます。
+    </p>
+
+	 </div>
+<!-- Right column -->
+        <div class="details">
+        <h2>[解説・用語]</h2>
+	</div>
+        
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+
+    
