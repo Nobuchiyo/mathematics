@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title>ローレンツ因子と無限等比級数</title>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1>ローレンツ因子と無限等比級数の収束条件</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="math.html">数学</a></li>
+                    <li><a href="../coding/programming.html">プログラミング</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="../guide/guidance.html">このサイトのご利用方法</a></li>
+                    <li><a>お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="flex-container">
+            <a href="elementary.html"><h2>小学校算数</h2></a>
+            <a href="junior-high.html"><h2>中学数学</h2></a>
+            <a href="high-school.html"><h2>高校数学</h2></a>
+            <a href="university.html"><h2>大学数学</h2></a>
+            <a href="formulas.html"><h2>数学公式集</h2></a>
+            <a href="../exam.html"><h2>過去問・解答付き</h2></a>
+        </div>
+        </header>
+        
+	<main class="two-column">
+	<!-- Left column -->
+        <div class="content">
+	
+	<h2>ローレンツ因子にみられる等比級数の公式</h2>
 
+    <p>
+        ローレンツ因子の二乗は、次の形で表されます：
+    </p>
+
+    <p style="text-align: center;">
+        \[
+        \gamma^2 = \frac{1}{1 - \frac{v^2}{c^2}}
+        \]
+    </p>
+
+    <p>
+        ここで、分母の \( 1 - \frac{v^2}{c^2} \) は無限等比級数の分母と同じ形式を持っています。
+        無限等比級数の公式は次の通りです：
+    </p>
+
+    <p style="text-align: center;">
+        \[
+        \frac{1}{1 - r} = 1 + r + r^2 + r^3 + \cdots \quad (|r| < 1)
+        \]
+    </p>
+
+    <p>
+        ローレンツ因子の式と比較すると、\( r = \frac{v^2}{c^2} \) に対応します。
+        したがって、\( \gamma^2 \) を展開すると：
+    </p>
+
+    <p style="text-align: center;">
+        \[
+        \gamma^2 = 1 + \frac{v^2}{c^2} + \left(\frac{v^2}{c^2}\right)^2 + \left(\frac{v^2}{c^2}\right)^3 + \cdots
+        \]
+    </p>
+
+    <h2>収束条件</h2>
+
+    <p>
+        無限等比級数が収束するためには、公比 \( r \) が次の条件を満たす必要があります：
+    </p>
+
+    <p style="text-align: center;">
+        \[
+        |r| < 1
+        \]
+    </p>
+
+    <p>
+        つまり、\( r = \frac{v^2}{c^2} \) の場合、収束条件は次のようになります：
+    </p>
+
+    <p style="text-align: center;">
+        \[
+        \frac{v^2}{c^2} < 1 \quad \Rightarrow \quad v < c
+        \]
+    </p>
+
+    <p>
+        この条件は、物理的にも重要です。\( v \)（速度）が光速 \( c \) を超えない限り、ローレンツ因子の二乗は収束します。
+        一方、\( v \to c \) の場合、\( \frac{v^2}{c^2} \to 1 \) となり、級数は発散し、\( \gamma \to \infty \) となります。
+    </p>
+
+    <h2>物理的解釈</h2>
+
+    <p>
+        公比 \( \frac{v^2}{c^2} \) は、速度 \( v \) が光速 \( c \) にどれだけ近いかを示しています。
+        この視点から、次のように解釈できます：
+    </p>
+
+    <ul>
+        <li><b>低速域（\( v \ll c \)）:</b> \( \frac{v^2}{c^2} \) が非常に小さく、公比の影響が弱い。この場合、級数の最初の項 \( 1 \) が支配的であり、\( \gamma \approx 1 \)。</li>
+        <li><b>高速域（\( v \to c \)）:</b> \( \frac{v^2}{c^2} \to 1 \) に近づき、公比が大きくなることで級数が発散します。この発散は、光速を超えることが不可能であることを示しています。</li>
+    </ul>
+
+    <h2>まとめ</h2>
+
+    <p>
+        ローレンツ因子の二乗を無限等比級数として解釈することで、数学的性質と物理的な意味を結びつけることができます。
+        特に、公比 \( \frac{v^2}{c^2} \) が収束条件を満たす範囲で、相対性理論の基本的な速度制限を数学的に理解することができます。
+    </p>
+	 </div>
+<!-- Right column -->
+        <div class="details">
+        <h2>[解説・用語]</h2>
+	</div>
+        
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
